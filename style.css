@@ -1,0 +1,274 @@
+
+/* FARMCHAIN COMPLETE WEBSITE DESIGN */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f3f8f1 !important;
+    color: #263b2b !important;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(120deg, #124d2b, #27834b) !important;
+    color: white !important;
+    padding: 28px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+header p {
+    color: #e0f5e5;
+}
+
+.header-tag {
+    background: #ffffff20;
+    padding: 10px 18px;
+    border-radius: 25px;
+    border: 1px solid #ffffff50;
+}
+
+/* NAVIGATION */
+
+nav {
+    background: white !important;
+    padding: 18px 7%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 12px #00000010;
+}
+
+nav a {
+    text-decoration: none;
+    color: #28613a !important;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #20a052 !important;
+}
+
+/* MAIN AREA */
+
+main {
+    width: 86%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+/* SECTIONS */
+
+section {
+    background: white !important;
+    color: #263b2b !important;
+    padding: 32px;
+    margin-bottom: 28px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px #183d2410;
+}
+
+section h1 {
+    font-size: 30px;
+    color: #174c2b !important;
+    margin-bottom: 10px;
+}
+
+section h2 {
+    color: #1e6537 !important;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+section h3 {
+    color: #28613a !important;
+}
+
+.description,
+#dashboard > p {
+    color: #718075 !important;
+    margin-bottom: 20px;
+}
+
+/* DASHBOARD CARDS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.card {
+    background: #eff8f0 !important;
+    padding: 25px;
+    border-radius: 13px;
+    border-left: 5px solid #36a45c;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card span {
+    font-size: 26px;
+}
+
+.card h3 {
+    color: #58715e !important;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.card h2 {
+    font-size: 34px;
+    color: #1b743b !important;
+    margin-top: 10px;
+}
+
+/* FORMS */
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d7e4d8;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    background: white !important;
+    color: #263b2b !important;
+    margin-bottom: 12px;
+}
+
+input:focus, select:focus {
+    border-color: #2c9a50;
+    box-shadow: 0 0 5px #2c9a5030;
+}
+
+form button {
+    grid-column: 1 / -1;
+}
+
+/* BUTTONS */
+
+button {
+    background: #238747 !important;
+    color: white !important;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #176532 !important;
+}
+
+/* TRACKING */
+
+.search-area {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.search-area input {
+    flex: 1;
+    min-width: 200px;
+}
+
+#trackResult, #historyResult {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f0f8f1 !important;
+    border-radius: 10px;
+    line-height: 1.9;
+    color: #263b2b !important;
+    overflow-wrap: anywhere;
+}
+
+.history-item {
+    padding: 15px;
+    margin-bottom: 12px;
+    border-left: 4px solid #36a45c;
+    background: white;
+    border-radius: 8px;
+}
+
+/* MANAGE PRODUCT */
+
+#manage h3 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+#manage hr {
+    margin: 25px 0;
+    border: 0;
+    border-top: 1px solid #e0e9e0;
+}
+
+/* FOOTER */
+
+footer {
+    background: #123e25 !important;
+    color: white !important;
+    text-align: center;
+    padding: 28px;
+    line-height: 1.8;
+    margin-top: 40px;
+}
+
+footer h3 {
+    color: white !important;
+}
+
+/* MOBILE DESIGN */
+
+@media (max-width: 750px) {
+    .stats, form {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 22px;
+    }
+}

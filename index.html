@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmChain | Smart Agriculture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <h2>🌱 FarmChain</h2>
+            <p>Smart Agriculture Product Traceability</p>
+        </div>
+        <div class="header-tag">Blockchain Powered</div>
+    </header>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#register">Register Product</a>
+        <a href="#track">Track Product</a>
+        <a href="#manage">Manage Product</a>
+        <a href="#history">Product History</a>
+    </nav>
+
+    <main>
+
+        <!-- DASHBOARD -->
+        <section id="dashboard">
+            <h1>FarmChain Dashboard</h1>
+            <p>Track agricultural products from farm to retailer.</p>
+
+            <div class="stats">
+                <div class="card">
+                    <span>📦</span>
+                    <h3>Total Products</h3>
+                    <h2 id="totalProducts">0</h2>
+                </div>
+
+                <div class="card">
+                    <span>✅</span>
+                    <h3>Quality Passed</h3>
+                    <h2 id="qualityPassed">0</h2>
+                </div>
+
+                <div class="card">
+                    <span>🚚</span>
+                    <h3>Products Delivered</h3>
+                    <h2 id="delivered">0</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- REGISTER PRODUCT -->
+        <section id="register">
+            <h2>🌾 Register New Product</h2>
+            <p class="description">Add agricultural product details to the system.</p>
+
+            <form id="productForm">
+                <input id="name" type="text" placeholder="Product Name" required>
+                <input id="batchId" type="text" placeholder="Batch ID" required>
+                <input id="farmer" type="text" placeholder="Farmer Name" required>
+                <input id="location" type="text" placeholder="Farm Location" required>
+                <input id="quantity" type="number" min="1" placeholder="Quantity" required>
+                <input id="harvestDate" type="date" required>
+
+                <button type="submit">Register Product</button>
+            </form>
+        </section>
+
+        <!-- TRACK PRODUCT -->
+        <section id="track">
+            <h2>🔍 Track Your Product</h2>
+            <p class="description">Enter a batch ID to view product information.</p>
+
+            <div class="search-area">
+                <input id="searchBatch" type="text" placeholder="Enter Batch ID">
+                <button onclick="trackProduct()">Track Product</button>
+            </div>
+
+            <div id="trackResult">
+                Product details will appear here.
+            </div>
+        </section>
+
+        <!-- MANAGE PRODUCT -->
+        <section id="manage">
+            <h2>⚙️ Manage Product</h2>
+            <p class="description">Update product movement and inspection details.</p>
+
+            <h3>Update Product Status</h3>
+
+            <input id="manageBatch" placeholder="Enter Batch ID">
+
+            <select id="newStatus">
+                <option value="Harvested">Harvested</option>
+                <option value="In Transit">In Transit</option>
+                <option value="At Retailer">At Retailer</option>
+                <option value="Delivered">Delivered</option>
+            </select>
+
+            <input id="updateLocation" placeholder="Current Location">
+            <input id="updateNotes" placeholder="Update Notes">
+
+            <button onclick="updateProductStatus()">Update Status</button>
+
+            <hr>
+
+            <h3>Quality Inspection</h3>
+
+            <input id="qualityBatch" placeholder="Enter Batch ID">
+
+            <select id="qualityStatus">
+                <option value="true">Quality Passed</option>
+                <option value="false">Quality Failed</option>
+            </select>
+
+            <input id="qualityNotes" placeholder="Inspection Notes">
+
+            <button onclick="checkQuality()">Submit Inspection</button>
+            <hr>
+<h3>⚠️ Product Recall</h3>
+<input id="recallBatch" type="text" placeholder="Enter Batch ID">
+<input id="recallReason" type="text" placeholder="Reason for Recall">
+<button onclick="recallProduct()">Recall Product</button>
+        </section>
+
+        <!-- PRODUCT HISTORY -->
+        <section id="history">
+            <h2>📋 Supply Chain History</h2>
+            <p class="description">View all recorded product activities.</p>
+
+            <div id="historyResult">
+                Search for a batch ID to view its history.
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>🌱 FarmChain</h3>
+        <p>Blockchain-Based Agricultural Product Traceability</p>
+        <p>Secure • Transparent • Reliable</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
